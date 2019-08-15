@@ -1,7 +1,7 @@
 #!/bin/bash -xve
 
 sudo apt-get update
-sudo apt-get install libopencv-core-dev libopencv-dev python-opencv
+sudo apt-get install opencv-data libopencv-dev python-opencv
 
 #sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 #sudo ldconfig
