@@ -57,7 +57,9 @@ class FaceToFace():
            
         wid = self.image_org.shape[1]/2   #画像の幅の半分の値
         pos_x_rate = (r[0] + r[2]/2 - wid)*1.0/wid
-        rot = -0.25*pos_x_rate*math.pi    #画面のキワに顔がある場合にpi/4[rad/s]に
+        rot = -0.3*pos_x_rate*math.pi    #画面のキワに顔がある場合にpi/4[rad/s]に
+	if -0.3 < pos_x_rate < 0.3:
+	    rot = 0.0
         rospy.loginfo("detected %f",rot)
         return rot
 
